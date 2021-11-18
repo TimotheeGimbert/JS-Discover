@@ -19,7 +19,7 @@ function draw_half_pyramid(n) {
 function half_pyramid() {
   console.log("Salut, bienvenue dans ma demi pyramide ! Combien d'étages veux-tu ?");
   nbFloors = getInput();
-  console.log("Voici une demi-pyramide à #{nbFloors} étages :");
+  console.log(`Voici une demi-pyramide à ${nbFloors} étages :`);
   draw_half_pyramid(nbFloors);
 }
 
