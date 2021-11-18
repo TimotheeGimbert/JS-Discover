@@ -20,7 +20,7 @@ const entrepreneurs = [
   ];
 
 function getSeventies(humanArray) {
-    seventies = [];
+    let seventies = [];
     humanArray.forEach(human => {
         if (human.year >= 1970 && human.year < 1980) {
             seventies.push(human);
@@ -31,7 +31,7 @@ function getSeventies(humanArray) {
 }
 
 function getFullNamesArray(humanArray) {
-    fullNamesArray = [];
+    let fullNamesArray = [];
     humanArray.forEach(human => {
         str = human.first + " " + human.last;
         fullNamesArray.push(str);
@@ -41,13 +41,13 @@ function getFullNamesArray(humanArray) {
 
 function showAge(humanArray) {
     humanArray.forEach(human => {
-        age = 2021 - human.year;
-        console.log(`${human.first} ${human.last} aurait ${age} ans cette année.`)
+        let age = 2021 - human.year;
+        console.log(`${human.first} ${human.last} aurait ${age} ans cette année.`);
     });
 }
 
 function orderByLastName(humanArray) {
-    lastNamesArray = [];
+    let lastNamesArray = [];
     humanArray.forEach(human => {
         lastNamesArray.push(human.last);
     });

@@ -31,5 +31,45 @@ function allHasBeenRented(booksArray) {
     return true;
 }
 
+function getMostRented(booksArray) {
+    let rentedArray = [];
+    booksArray.forEach( book => {
+        rentedArray.push(book.rented);
+    });
+    rentedArray.sort();
+    console.log(rentedArray);
+    let maxRented = rentedArray[rentedArray.length-1];
+    booksArray.forEach( book => {
+        if (book.rented == maxRented) {
+            let mostRentedBook = book;
+            console.log("le livre le plus emprunté:");
+            console.log(book);
+            return mostRentedBook;
+        }
+    });
+    let minRented = rentedArray[0];
+    booksArray.forEach( book => {
+        if (book.rented == minRented) {
+            let lessRentedBook = book;
+            console.log("le livre le moins emprunté:");
+            console.log(book);
+            return lessRentedBook;
+        }
+    });
+}
+
+function findBookById(booksArray, id) {
+    booksArray.forEach( book => {
+        if (book.id == id) {
+            console.log("le livre 873495:");
+            console.log(book);
+        }
+    });
+}
+
+
 console.log("Les livres ont ils tous été empruntés au moins une fois?");
 console.log(allHasBeenRented(books));
+
+console.log(getMostRented(books));
+findBookById(books, 873495);
