@@ -30,12 +30,6 @@ function getSeventies(humanArray) {
     return seventies;
 }
 
-console.log(getSeventies(entrepreneurs));
-
-
-
-
-
 function getFullNamesArray(humanArray) {
     fullNamesArray = [];
     humanArray.forEach(human => {
@@ -45,4 +39,13 @@ function getFullNamesArray(humanArray) {
     return fullNamesArray;
 }
 
+function showAge(humanArray) {
+    humanArray.forEach(human => {
+        age = 2021 - human.year;
+        console.log(`${human.first} ${human.last} aurait ${age} ans cette année.`)
+    });
+}
+
+console.log(getSeventies(entrepreneurs));
 console.log(getFullNamesArray(entrepreneurs));
+showAge(entrepreneurs);
