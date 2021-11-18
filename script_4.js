@@ -46,6 +46,15 @@ function showAge(humanArray) {
     });
 }
 
+function orderByLastName(humanArray) {
+    lastNamesArray = [];
+    humanArray.forEach(human => {
+        lastNamesArray.push(human.last);
+    });
+    return lastNamesArray.sort();
+}
+
 console.log(getSeventies(entrepreneurs));
 console.log(getFullNamesArray(entrepreneurs));
 showAge(entrepreneurs);
+console.log(orderByLastName(entrepreneurs));
