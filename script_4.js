@@ -19,9 +19,9 @@ const entrepreneurs = [
     { first: 'Peter', last: 'Thiel', year: 1967 }
   ];
 
-function getSeventies() {
+function getSeventies(humanArray) {
     seventies = [];
-    entrepreneurs.forEach(human => {
+    humanArray.forEach(human => {
         if (human.year >= 1970 && human.year < 1980) {
             seventies.push(human);
             console.log(human);
@@ -30,4 +30,19 @@ function getSeventies() {
     return seventies;
 }
 
-console.log(getSeventies());
+console.log(getSeventies(entrepreneurs));
+
+
+
+
+
+function getFullNamesArray(humanArray) {
+    fullNamesArray = [];
+    humanArray.forEach(human => {
+        str = human.first + " " + human.last;
+        fullNamesArray.push(str);
+    });
+    return fullNamesArray;
+}
+
+console.log(getFullNamesArray(entrepreneurs));
